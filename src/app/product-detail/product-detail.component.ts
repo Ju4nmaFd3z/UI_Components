@@ -9,9 +9,9 @@ import { Product } from '../product';
 })
 export class ProductDetailComponent {
   product = input<Product | undefined>();
-  added = output();
+  added = output<String>();
 
   addToCart() {
-    this.added.emit();
+    this.added.emit('Mensaje para el padre');
   }
 }

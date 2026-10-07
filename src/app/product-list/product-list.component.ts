@@ -9,14 +9,14 @@ import { ProductDetailComponent } from '../product-detail/product-detail.compone
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent {
-  
+
   products: Product[] = [
     { id: 1, title: 'Keyboard'},
     { id: 2, title: 'Microphone' },
     { id: 3, title: 'Web camera' },
     { id: 4, title: 'Tablet' }
   ];
-  
+
   selectedProduct: Product | undefined;
 
   onSelect(product: Product) {
@@ -24,7 +24,8 @@ export class ProductListComponent {
     console.log(`Selected product: ${product.title}`);
   }
 
-  onAdded() {
+  onAdded(mensaje: String) {
+    console.log(`Mensaje del hijo: ${mensaje}`);
     alert(`${this.selectedProduct?.title} added to the cart!`);
   }
 }
