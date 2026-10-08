@@ -24,7 +24,7 @@ export class ProductListComponent {
     console.log(`Selected product: ${product.title}`);
   }
 
-  onAdded(mensaje: String) {
+  onAdded(mensaje: string) {
     console.log(`Mensaje del hijo: ${mensaje}`);
     alert(`${this.selectedProduct?.title} added to the cart!`);
   }
